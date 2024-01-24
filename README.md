@@ -1,4 +1,4 @@
-# aryanamoh.github.io
+# Aryana Mohammadi
 
 ### Projects
 - [Drumkit Cellular Automata](https://aryanamoh.github.io/drumkit-program-synth/)
