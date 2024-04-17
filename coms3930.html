@@ -182,7 +182,7 @@
                     <div class="section-heading">
                         <h3>02.2024</h3>
                         <h2 class="section-title">Generative Art</h2>
-                        </h2>
+                        
 
                         <p class="section-subtitle">Github: <a target="_blank" href="https://github.com/aryanamoh/generative-art">https://github.com/aryanamoh/generative-art</a> </p>
                         
@@ -268,38 +268,59 @@
                     <div class="section-heading">
                         <h3>03.2024</h3>
                         <h2 class="section-title">Morse Code Translator</h2>
-                        </h2>
 
                         <p class="section-subtitle">Github: <a target="_blank" href="https://github.com/aryanamoh/morse-code-interpreter">https://github.com/aryanamoh/morse-code-interpreter</a> </p>
                         
-                        <p> For this project, </p>
-                    </div>
+                        <p><strong>About</strong></p>
+                        <p>I created a Morse code translator with a physical interface for inputting Morse code signals and a user interface for displaying the translated text. This translator allows users to input Morse code signals using buttons and a dial, with the translated text appearing in real time on the user interface.</p>
 
+                        <p><strong>Arduino Code (Physical Interface):</strong></p>
+                        <p>The Arduino code handles physical inputs and translates them into Morse code signals. It continuously monitors the state of the buttons and the potentiometer. Each button press triggers a specific Morse code output. The green button, for instance, enables short and long presses representing dots and dashes, respectively. Additionally, the white button triggers single or double spaces, while the red button clears the current Morse code sequence. Changes in the dial's position dynamically modify the font size on the user interface.</p>
+
+                        <p><strong>Python Code (User Interface):</strong></p>
+                        <p>The Python code establishes a serial connection with the Arduino board to receive Morse code signals. It continuously reads data from the serial port and updates the display accordingly. I used Tkinter to develop the user interface, aiming for simplicity and intuitiveness. When Morse code signals are received, they are translated into English text and displayed on the user interface. The received Morse code sequences are also displayed in their original form for reference. However, I encountered challenges with reading signals from the serial monitor. Solving this issue required careful configuration of baud rate, port settings, and understanding the differences between /dev/tty* and /dev/cu* in serial devices.</p>
+
+                        <p><strong>Enclosure and Physical Tool:</strong></p>
+                        <p>To create the enclosure, I learned how to use a laser cutter. I decided on an open-concept box so that the ESP32 and all the wired connections are visible from the side while the tool looks clean and neat from the top. I tinkered with various materials and designs to develop the final container. One challenge I ran into here was creating holes for the sensors that were just large enough to fit the body of the sensor while not being too large that the lip of the sensors could slip through.</p>
+
+                        <p><strong>Next Steps:</strong></p>
+                        <p>The next step for this project would be to transition to a wireless connection between devices. This move could involve connecting the current tool to a laptop over WiFi or linking two independent tools using ESP-NOW. In the latter scenario, messages would be shown on the ESP32 display rather than on a computer screen.</p>
+
+                    </div>
                 </div>
 
                 <div class="col">
-
                     <video width="600" height="450" controls> 
                         <source src="coms3930-media/morse-code-doc.MP4" type="video/mp4">
                         Your browser does not support this video.
                     </video> 
 
+                    <br><br><br>
+                    
+                    <img class="video-size pt-4" src="coms3930-media/mc-breadboard.jpeg" alt="ESP32 Breadboard Connection"/>
                 </div>
-
-                <!--Gallery-->
-                <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
-                data-featherlight-filter="a">
-
-                    <a href="coms3930-media/mc-doc-side.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                        data-wow-delay="0.1s"><img src="coms3930-media/mc-doc-side.jpg" alt="Morse Code Translation Tool"/></a>
-                    <a href="coms3930-media/mc-doc-inside.JPG" data-featherlight="image" class="col-3 wow fadeIn"
-                        data-wow-delay="0.3s"><img src="coms3930-media/mc-doc-inside.JPG" alt="Morse Code Translation Tool"/></a>
-                    <a href="coms3930-media/mc-doc-top.jpeg" data-featherlight="image" class="col-3 wow fadeIn"
-                        data-wow-delay="0.5s"><img src="coms3930-media/mc-doc-top.jpeg" alt="Morse Code Translation Tool"/></a>
-
-                </aside>
-                <!--End of Gallery-->
             </div>
+
+            <!-- <div class="position-relative">
+                <video id="mc-video" width="600" height="450" controls> 
+                    <source src="coms3930-media/morse-code-doc.MP4" type="video/mp4">
+                    Your browser does not support this video.
+                </video> 
+            </div> -->
+
+            <!--Gallery-->
+            <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
+            data-featherlight-filter="a">
+
+                <a href="coms3930-media/mc-doc-side.jpg" data-featherlight="image" class="col-3 wow fadeIn"
+                    data-wow-delay="0.1s"><img src="coms3930-media/mc-doc-side.jpg" alt="Morse Code Translation Tool"/></a>
+                <a href="coms3930-media/mc-doc-inside.JPG" data-featherlight="image" class="col-3 wow fadeIn"
+                    data-wow-delay="0.3s"><img src="coms3930-media/mc-doc-inside.JPG" alt="Morse Code Translation Tool"/></a>
+                <a href="coms3930-media/mc-doc-top.jpeg" data-featherlight="image" class="col-3 wow fadeIn"
+                    data-wow-delay="0.5s"><img src="coms3930-media/mc-doc-top.jpeg" alt="Morse Code Translation Tool"/></a>
+
+            </aside>
+            <!--End of Gallery-->
 
 
         </section>
